@@ -1,4 +1,4 @@
-package java2_herencias2;
+package java2_herencias;
 
 public class Casa extends Vivienda {
 	
@@ -23,5 +23,11 @@ public class Casa extends Vivienda {
 	public void setAntig(int antig) {
 		this.antig = antig;
 	}
+	@Override
+	public void  vender(){
+		super.vender();
+		System.out.println("A la venta en 'Inmobiliaria Casas'"); 
+	}
+	
+}
 
-} 

@@ -1,4 +1,4 @@
-package java2_herencias2;
+package java2_herencias;
 
 public class Piso extends Vivienda{
 	
@@ -24,5 +24,10 @@ public class Piso extends Vivienda{
 	public void setLetraPiso(char letraPiso) {
 		this.letraPiso = letraPiso;
 	}
-
+	@Override
+	public void  vender(){
+		super.vender();
+		System.out.println("A la venta en 'Inmobiliaria Pisos'"); 
+	}
+	
 }

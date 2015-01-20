@@ -1,8 +1,8 @@
-package java2_herencias2;
+package java2_herencias;
 
 public class Vivienda {
 	
-	private int tamaÃ±o, numHabit;
+	private int tamaño, numHabit;
 	private String direccion;
 	
 	
@@ -10,11 +10,11 @@ public class Vivienda {
 	public Vivienda(){}
 	
 	//Getters y Setters
-	public int getTamaÃ±o() {
-		return tamaÃ±o;
+	public int getTamaño() {
+		return tamaño;
 	}
-	public void setTamaÃ±o(int tamaÃ±o) {
-		this.tamaÃ±o = tamaÃ±o;
+	public void setTamaño(int tamaño) {
+		this.tamaño = tamaño;
 	}
 	public int getNumHabit() {
 		return numHabit;
@@ -27,6 +27,9 @@ public class Vivienda {
 	}
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
+	}
+	public void vender(){
+		System.out.println("Esta vivienda está a la venta.");
 	}
 	
 }
