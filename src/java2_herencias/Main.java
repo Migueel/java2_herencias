@@ -11,7 +11,7 @@ public class Main {
 		Casa casa = new Casa();
 		Hashtable<String, String> datos = new Hashtable<String, String>();
 		
-		String calle, tipo;
+		String calle, tipo, mostrar;
 		int tamaño, habitaciones, numPiso, pisoCasa, antig;
 		char letraPiso;
 		
@@ -20,9 +20,9 @@ public class Main {
 		System.out.println("Tipo de vivienda: (Piso/Casa)");
 		tipo = sc.next();
 		
-		datos.put("tipo", tipo);
+		datos.put("Tipo", tipo);
 		
-		if (tipo.equalsIgnoreCase("piso")) {
+	if (tipo.equalsIgnoreCase("piso")) {
 			
 			System.out.println("Calle");
 			calle = sc.next();
@@ -57,9 +57,8 @@ public class Main {
 			piso.setLetraPiso(letraPiso);
 			datos.put("Puerta", String.valueOf(piso.getLetraPiso()));
 			
-			System.out.println("Datos de la vivenda");
+			System.out.println("Datos del piso");
 			System.out.println("**********************");
-			System.out.println("\tTipo: " + datos.get("Tipo") );
 			System.out.println("\tCalle: " +datos.get("Calle"));
 			System.out.println("\tPlanta: " +datos.get("Planta"));
 			System.out.println("\tPuerta: " +datos.get("Puerta"));
@@ -95,7 +94,7 @@ public class Main {
 			
 			casa.setNumPisos(pisoCasa);
 			Integer plantas = new Integer(casa.getNumHabit());
-			datos.put("Numero de pisos", plantas.toString());
+			datos.put("Pisos", plantas.toString());
 			
 			System.out.println("Antigüedad");
 			antig = sc.nextInt();
@@ -104,20 +103,26 @@ public class Main {
 			Integer años = new Integer(casa.getNumHabit());
 			datos.put("Antigüedad", años.toString());
 			
-			System.out.println("Datos de la vivenda");
+			System.out.println("Datos de la casa");
 			System.out.println("**********************");
-			System.out.println("\tTipo: " +tipo );
-			System.out.println("\tCalle: " +casa.getDireccion());
-			System.out.println("\tTamaño: " +casa.getTamaño());
-			System.out.println("\tNumero de habitaciones: " +casa.getNumHabit());
-			System.out.println("\tAntigüedad : " +casa.getAntig());
-			System.out.println("\tNumero de pisos: " +casa.getNumPisos());
+			System.out.println("\tCalle: " +datos.get("Calle"));
+			System.out.println("\tTamaño: " +datos.get("Tamaño"));
+			System.out.println("\tAntigüedad: " +datos.get("Antigüedad"));
+			System.out.println("\tNumero de pisos: " +datos.get("Pisos"));
+			System.out.println("\tNumero de habitaciones: " +datos.get("Habitaciones"));
 			
 			casa.vender();
 			
 		}
+		System.out.println("\nIntroduce 'mostrar' para mostrar Hashtable");
+		mostrar = sc.next();
 		
-		
+		if(mostrar.equalsIgnoreCase(mostrar)){
+			System.out.println(datos);
+		}
+		else {
+			System.out.println("Adiós");
+		}
 
 	}
 

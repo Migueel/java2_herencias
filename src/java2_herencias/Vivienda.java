@@ -29,7 +29,7 @@ public class Vivienda {
 		this.direccion = direccion;
 	}
 	public void vender(){
-		System.out.println("Esta vivienda está a la venta.");
+		System.out.println("\nEsta vivienda está a la venta.");
 	}
 	
 }
